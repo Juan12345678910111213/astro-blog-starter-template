@@ -1,50 +1,75 @@
----
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
----
+globalThis.process ??= {}; globalThis.process.env ??= {};
+import { c as createComponent, r as renderComponent, b as renderHead, a as renderTemplate } from '../chunks/astro/server_BdLCb9DP.mjs';
+import { $ as $$BaseHead, a as $$Header, b as $$Footer } from '../chunks/Header_BPGgCsDT.mjs';
+import { S as SITE_DESCRIPTION, a as SITE_TITLE } from '../chunks/consts_By03dtiO.mjs';
+export { renderers } from '../renderers.mjs';
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`<html lang="en"> <head>${renderComponent($$result, "BaseHead", $$BaseHead, { "title": SITE_TITLE, "description": SITE_DESCRIPTION })}${renderHead()}</head> <body> ${renderComponent($$result, "Header", $$Header, {})} <main> <h1>Diccionario filosofico!</h1> <h2>A</h2> <p> <strong>A priori / A posteriori:</strong> Distinción sobre el origen del conocimiento. A priori es el conocimiento independiente de la experiencia (ej: "todo efecto tiene una causa"). A posteriori es el conocimiento que depende de la experiencia (ej: "el agua hierve a 100°C").
+</p> <p> <strong>Absoluto:</strong> Lo incondicionado, lo que existe por sí mismo y no depende de nada más. Para Hegel, es la realidad última, la totalidad que se desarrolla dialécticamente.
+</p> <p> <strong>Alienación (Enajenación):</strong> Concepto central en Marx que describe el proceso por el cual el trabajador se vuelve ajeno a lo que produce, a su actividad creativa, a sus compañeros y, finalmente, a su propia esencia humana.
+</p> <p> <strong>Aristotelismo:</strong> Sistema filosófico de Aristóteles, que hace hincapié en la observación empírica, la lógica, la teleología (todo tiene un fin) y la distinción entre sustancia y accidente.
+</p> <h2>C</h2> <p> <strong>Categoría:</strong> Concepto fundamental y puro del entendimiento que usamos para organizar la experiencia. Kant enumeró 12 categorías (como causalidad, unidad, pluralidad).
+</p> <p> <strong>Cogito, ergo sum ("Pienso, luego existo"):</strong> Fundamento de la duda metódica de Descartes. Es la primera verdad indudable que encuentra: la propia existencia como sujeto pensante.
+</p> <p> <strong>Conciencia:</strong> La capacidad de darse cuenta de sí mismo y del mundo exterior. Para la fenomenología, la conciencia es siempre "conciencia de algo" (intencionalidad).
+</p> <p> <strong>Contingente:</strong> Lo que puede ser o no ser, que no es necesario ni imposible. Lo opuesto a necesario.
+</p> <h2>D</h2> <p> <strong>Deconstrucción:</strong> Método filosófico desarrollado por Jacques Derrida que busca exponer las contradicciones y jerarquías implícitas en los textos, mostrando cómo el lenguaje construye y deconstruye el significado.
+</p> <p> <strong>Dialéctica:</strong> Método de argumentación y sistema filosófico que avanza a través de la contraposición de ideas (tesis, antítesis) para llegar a una síntesis superior. Central en Platón, Hegel y Marx.
+</p> <p> <strong>Dogmatismo:</strong> Actitud filosófica que defiende que la razón humana puede alcanzar la verdad absoluta, sin someter sus principios a crítica o duda.
+</p> <p> <strong>Duda metódica:</strong> Procedimiento de Descartes para encontrar una verdad indudable, consistente en dudar de todo aquello que no sea absolutamente evidente.
+</p> <h2>E</h2> <p> <strong>Empirismo:</strong> Corriente filosófica que sostiene que todo conocimiento proviene, en última instancia, de la experiencia sensible (los sentidos). Representantes: Locke, Hume.
+</p> <p> <strong>Epicureísmo:</strong> Escuela filosófica fundada por Epicuro que defiende la búsqueda de una vida feliz mediante la búsqueda inteligente de placeres (ataraxia: ausencia de turbación) y la ausencia de dolor.
+</p> <p> <strong>Escolástica:</strong> Filosofía medieval que intentó conciliar la fe cristiana con la razón, especialmente con la filosofía de Aristóteles. Santo Tomás de Aquino es su máximo exponente.
+</p> <p> <strong>Escepticismo:</strong> Corriente filosófica que duda de la posibilidad de alcanzar el conocimiento verdadero. Puede ser radical (negar toda posibilidad de conocimiento) o moderado (suspender el juicio).
+</p> <p> <strong>Esencia:</strong> Lo que hace que una cosa sea lo que es, sus propiedades fundamentales e invariables. Se opone a la existencia.
+</p> <p> <strong>Estética:</strong> Rama de la filosofía que estudia la naturaleza de la belleza, el arte y la percepción de lo bello.
+</p> <p> <strong>Estoicismo:</strong> Escuela filosófica que enseña que la felicidad se alcanza viviendo de acuerdo con la naturaleza y la razón, aceptando el destino con serenidad (apatheia).
+</p> <p> <strong>Estructuralismo:</strong> Movimiento intelectual que analiza los fenómenos culturales (lenguaje, sociedad, mitos) como sistemas de relaciones o estructuras, donde los elementos no tienen significado por sí mismos, sino en su relación con los demás.
+</p> <p> <strong>Ética:</strong> Rama de la filosofía que estudia la moral, los principios y los fundamentos de la acción humana, lo que se considera bueno o malo, correcto o incorrecto.
+</p> <p> <strong>Existencialismo:</strong> Corriente filosófica que enfatiza la libertad individual, la responsabilidad y la subjetividad. Sostiene que "la existencia precede a la esencia" (Sartre), es decir, que el ser humano primero existe y luego se define a sí mismo a través de sus acciones.
+</p> <p> <strong>Experiencia:</strong> El conocimiento o habilidad adquirida a través de la observación, la participación o la vivencia de eventos. Es la base del conocimiento para el empirismo.
+</p> <h2>F</h2> <p> <strong>Falacia:</strong> Argumento que parece válido pero no lo es.
+</p> <p> <strong>Fenomenología:</strong> Movimiento filosófico que describe las estructuras de la experiencia tal como se presentan en la conciencia.
+</p> <p> <strong>Fideísmo:</strong> Doctrina que sostiene que a Dios no se puede llegar por la razón, sino sólo por la fe.
+</p> <h2>G</h2> <p> <strong>Gnoseología:</strong> Rama de la filosofía que estudia el origen, la naturaleza y los límites del conocimiento.
+</p> <h2>H</h2> <p> <strong>Hedonismo:</strong> Doctrina ética que identifica el bien con el placer.
+</p> <p> <strong>Hermenéutica:</strong> El arte de la interpretación de textos.
+</p> <p> <strong>Humanismo:</strong> Movimiento que enfatiza el valor y la agencia de los seres humanos.
+</p> <h2>I</h2> <p> <strong>Idealismo:</strong> Familia de teorías filosóficas que afirman la primacía de las ideas o de la mente sobre la materia.
+</p> <p> <strong>Innato:</strong> Conocimiento o ideas que se considera que están presentes en la mente desde el nacimiento.
+</p> <h2>L</h2> <p> <strong>Libre albedrío:</strong> La capacidad de los agentes para elegir entre diferentes posibles cursos de acción sin impedimentos.
+</p> <p> <strong>Lógica:</strong> El estudio de los principios del razonamiento válido.
+</p> <h2>M</h2> <p> <strong>Materialismo:</strong> Doctrina filosófica que sostiene que la única realidad es la materia.
+</p> <p> <strong>Metafísica:</strong> Rama de la filosofía que estudia la naturaleza fundamental de la realidad.
+</p> <p> <strong>Moral:</strong> Conjunto de costumbres y normas que se consideran buenas para dirigir o juzgar el comportamiento de las personas en una comunidad.
+</p> <h2>N</h2> <p> <strong>Nihilismo:</strong> La creencia de que la vida no tiene significado, propósito o valor intrínseco.
+</p> <p> <strong>Noúmeno:</strong> La realidad tal como es en sí misma, independientemente de nuestra percepción (término de Kant).
+</p> <h2>O</h2> <p> <strong>Ontología:</strong> Rama de la metafísica que estudia el ser o la existencia.
+</p> <h2>P</h2> <p> <strong>Pragmatismo:</strong> Movimiento filosófico que evalúa las teorías o creencias en función de su éxito en la aplicación práctica.
+</p> <p> <strong>Post-estructuralismo:</strong> Movimiento intelectual que se basa en el estructuralismo pero lo critica por su rigidez.
+</p> <h2>R</h2> <p> <strong>Racionalismo:</strong> Corriente filosófica que acentúa el papel de la razón en la adquisición del conocimiento.
+</p> <p> <strong>Relativismo:</strong> La doctrina de que el conocimiento, la verdad y la moralidad existen en relación con la cultura, la sociedad o el contexto histórico, y no son absolutos.
+</p> <h2>S</h2> <p> <strong>Sofista:</strong> En la antigua Grecia, profesor de filosofía y retórica.
+</p> <p> <strong>Solipsismo:</strong> La idea de que solo la propia mente tiene la seguridad de existir.
+</p> <p> <strong>Subjetivismo:</strong> La doctrina de que el conocimiento es meramente subjetivo y que no existe una verdad externa u objetiva.
+</p> <h2>T</h2> <p> <strong>Teleología:</strong> El estudio de los fines o propósitos.
+</p> <p> <strong>Trascendental:</strong> Relativo a las condiciones de posibilidad del conocimiento (término de Kant).
+</p> <h2>U</h2> <p> <strong>Utilitarismo:</strong> Teoría ética que sostiene que la mejor acción es la que maximiza la utilidad, generalmente definida como la que maximiza la felicidad para el mayor número de personas.
+</p> <h2>V</h2> <p> <strong>Virtud:</strong> Excelencia moral.
+</p> <h2>Z</h2> <p> <strong>Zénon de Citio:</strong> Fundador del estoicismo.
+</p> </main> ${renderComponent($$result, "Footer", $$Footer, {})} </body></html>`;
+}, "/home/user/astro-blog/src/pages/index.astro", void 0);
+
+const $$file = "/home/user/astro-blog/src/pages/index.astro";
+const $$url = "";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+	__proto__: null,
+	default: $$Index,
+	file: $$file,
+	url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };
