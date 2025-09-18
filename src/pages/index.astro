@@ -4,27 +4,295 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
-// Datos del diccionario
+// Diccionario filosófico de la A a la Z
 const philosophicalTerms = [
-  {
-    term: "A priori / A posteriori",
-    definition: "Distinción sobre el origen del conocimiento. A priori es el conocimiento independiente de la experiencia. A posteriori es el conocimiento que depende de la experiencia.",
-    philosopher: "Immanuel Kant",
-    example: "La proposición 'todos los solteros no están casados' es a priori. 'Está lloviendo fuera' es a posteriori."
-  },
-  {
-    term: "Dialéctica",
-    definition: "Método de razonamiento que procede mediante el conflicto de opuestos. En Hegel, es el proceso (tesis-antítesis-síntesis) por el cual el Espíritu se desarrolla.",
-    philosopher: "Georg Wilhelm Friedrich Hegel",
-    example: "La historia progresa mediante la dialéctica: un statu quo (tesis) enfrenta una fuerza opuesta (antítesis) resultando en una nueva síntesis."
-  },
-  {
-    term: "Cogito, ergo sum",
-    definition: "Fundamento de la duda metódica de Descartes. Es la primera verdad indudable que encuentra: la propia existencia como sujeto pensante.",
-    philosopher: "René Descartes",
-    example: "Aunque dude de todo, no puedo dudar de que estoy dudando, por lo tanto existo como ser pensante."
-  }
-  // Agrega más términos aquí...
+	// A
+	{
+		term: "A priori / A posteriori",
+		definition: "Distinción sobre el origen del conocimiento. A priori es el conocimiento independiente de la experiencia. A posteriori es el conocimiento que depende de la experiencia.",
+		philosopher: "Immanuel Kant",
+		example: "La proposición 'todos los solteros no están casados' es a priori. 'Está lloviendo fuera' es a posteriori."
+	},
+	{
+		term: "Abstracción",
+		definition: "Proceso mental por el cual se aíslan características comunes de objetos o ideas para formar conceptos generales.",
+		philosopher: "Aristóteles",
+		example: "El concepto de 'animal' es una abstracción de las características comunes de los seres vivos que se mueven."
+	},
+	{
+		term: "Alienación",
+		definition: "Estado en el que el ser humano se siente ajeno a sí mismo o a su trabajo, especialmente en el contexto social o económico.",
+		philosopher: "Karl Marx",
+		example: "El obrero se aliena cuando su trabajo no le pertenece, sino al capitalista."
+	},
+	// B
+	{
+		term: "Bien",
+		definition: "Aquello que es moralmente correcto, deseable o beneficioso.",
+		philosopher: "Platón",
+		example: "La Idea del Bien es el principio supremo en la filosofía platónica."
+	},
+	{
+		term: "Belleza",
+		definition: "Cualidad de las cosas que produce placer estético y es objeto de reflexión filosófica en la estética.",
+		philosopher: "Plotino",
+		example: "La belleza es el resplandor de la verdad, según Plotino."
+	},
+	// C
+	{
+		term: "Categoría",
+		definition: "Concepto fundamental que sirve para clasificar y organizar la realidad.",
+		philosopher: "Aristóteles",
+		example: "Las categorías de sustancia, cantidad, cualidad, etc."
+	},
+	{
+		term: "Causalidad",
+		definition: "Relación entre causa y efecto, fundamental en la explicación de los fenómenos.",
+		philosopher: "David Hume",
+		example: "No percibimos la causa, solo la sucesión constante de eventos."
+	},
+	{
+		term: "Cogito, ergo sum",
+		definition: "Fundamento de la duda metódica de Descartes. Es la primera verdad indudable que encuentra: la propia existencia como sujeto pensante.",
+		philosopher: "René Descartes",
+		example: "Aunque dude de todo, no puedo dudar de que estoy dudando, por lo tanto existo como ser pensante."
+	},
+	// D
+	{
+		term: "Dialéctica",
+		definition: "Método de razonamiento que procede mediante el conflicto de opuestos. En Hegel, es el proceso (tesis-antítesis-síntesis) por el cual el Espíritu se desarrolla.",
+		philosopher: "Georg Wilhelm Friedrich Hegel",
+		example: "La historia progresa mediante la dialéctica: un statu quo (tesis) enfrenta una fuerza opuesta (antítesis) resultando en una nueva síntesis."
+	},
+	{
+		term: "Devenir",
+		definition: "Proceso de cambio y transformación constante de la realidad.",
+		philosopher: "Heráclito",
+		example: "Nadie se baña dos veces en el mismo río."
+	},
+	// E
+	{
+		term: "Esencia",
+		definition: "Lo que hace que una cosa sea lo que es y no otra cosa.",
+		philosopher: "Aristóteles",
+		example: "La esencia del triángulo es ser una figura de tres lados."
+	},
+	{
+		term: "Empirismo",
+		definition: "Doctrina que sostiene que el conocimiento proviene principalmente de la experiencia sensorial.",
+		philosopher: "John Locke",
+		example: "La mente es una 'tabla rasa' al nacer."
+	},
+	// F
+	{
+		term: "Fenómeno",
+		definition: "Aquello que se manifiesta a los sentidos, en oposición al noúmeno (lo que no se puede conocer directamente).",
+		philosopher: "Immanuel Kant",
+		example: "Solo podemos conocer los fenómenos, no las cosas en sí mismas."
+	},
+	{
+		term: "Finalidad",
+		definition: "Tendencia de algo a un fin o propósito, central en la teleología.",
+		philosopher: "Aristóteles",
+		example: "La finalidad de la semilla es convertirse en árbol."
+	},
+	// G
+	{
+		term: "Gnoseología",
+		definition: "Rama de la filosofía que estudia la naturaleza, el origen y los límites del conocimiento.",
+		philosopher: "Platón",
+		example: "El mito de la caverna es una reflexión gnoseológica."
+	},
+	{
+		term: "Gestalt",
+		definition: "Teoría psicológica y filosófica que enfatiza la percepción de totalidades.",
+		philosopher: "Max Wertheimer",
+		example: "El todo es más que la suma de las partes."
+	},
+	// H
+	{
+		term: "Hedonismo",
+		definition: "Doctrina ética que identifica el bien con el placer.",
+		philosopher: "Epicuro",
+		example: "El placer es el principio y fin de la vida feliz."
+	},
+	{
+		term: "Humanismo",
+		definition: "Corriente que pone al ser humano como centro de reflexión y valor.",
+		philosopher: "Erasmo de Rotterdam",
+		example: "El humanismo renacentista impulsó el estudio de las humanidades."
+	},
+	// I
+	{
+		term: "Idealismo",
+		definition: "Doctrina que sostiene que la realidad es fundamentalmente mental o espiritual.",
+		philosopher: "George Berkeley",
+		example: "Ser es ser percibido."
+	},
+	{
+		term: "Inmanencia",
+		definition: "Cualidad de lo que existe y actúa en sí mismo, en oposición a la trascendencia.",
+		philosopher: "Baruch Spinoza",
+		example: "Dios es inmanente al mundo, no externo a él."
+	},
+	// J
+	{
+		term: "Juicio",
+		definition: "Afirmación o negación que realiza el entendimiento sobre algo.",
+		philosopher: "Immanuel Kant",
+		example: "El juicio sintético a priori es central en la Crítica de la razón pura."
+	},
+	// K
+	{
+		term: "Katarsis",
+		definition: "Purificación emocional, corporal, mental o espiritual a través del arte o la experiencia filosófica.",
+		philosopher: "Aristóteles",
+		example: "La tragedia griega produce katarsis en el espectador."
+	},
+	// L
+	{
+		term: "Logos",
+		definition: "Razón o principio universal que ordena el cosmos.",
+		philosopher: "Heráclito",
+		example: "El logos es la ley universal del cambio."
+	},
+	{
+		term: "Libertad",
+		definition: "Capacidad de actuar según la propia voluntad.",
+		philosopher: "Jean-Paul Sartre",
+		example: "El hombre está condenado a ser libre."
+	},
+	// M
+	{
+		term: "Metafísica",
+		definition: "Rama de la filosofía que estudia la naturaleza última de la realidad.",
+		philosopher: "Aristóteles",
+		example: "La metafísica pregunta por el ser en cuanto ser."
+	},
+	{
+		term: "Monismo",
+		definition: "Doctrina que sostiene que todo lo existente es de una sola sustancia o principio.",
+		philosopher: "Baruch Spinoza",
+		example: "Solo existe una sustancia: Dios o la Naturaleza."
+	},
+	// N
+	{
+		term: "Noúmeno",
+		definition: "La cosa en sí, inaccesible a la experiencia, en oposición al fenómeno.",
+		philosopher: "Immanuel Kant",
+		example: "No podemos conocer el noúmeno, solo los fenómenos."
+	},
+	{
+		term: "Nihilismo",
+		definition: "Doctrina que niega la existencia de valores o significados objetivos.",
+		philosopher: "Friedrich Nietzsche",
+		example: "Dios ha muerto: el nihilismo es la consecuencia."
+	},
+	// O
+	{
+		term: "Ontología",
+		definition: "Rama de la metafísica que estudia el ser y sus categorías fundamentales.",
+		philosopher: "Martin Heidegger",
+		example: "La pregunta por el ser es el centro de la ontología."
+	},
+	{
+		term: "Ocasionalismo",
+		definition: "Doctrina según la cual Dios es la causa de toda interacción entre mente y cuerpo.",
+		philosopher: "Nicolas Malebranche",
+		example: "Dios interviene en cada ocasión para unir mente y cuerpo."
+	},
+	// P
+	{
+		term: "Pragmatismo",
+		definition: "Corriente filosófica que valora la verdad según sus efectos prácticos y útiles.",
+		philosopher: "William James",
+		example: "La verdad es lo que funciona en la práctica."
+	},
+	{
+		term: "Panteísmo",
+		definition: "Doctrina que identifica a Dios con el universo o la naturaleza.",
+		philosopher: "Baruch Spinoza",
+		example: "Dios es todo y todo es Dios."
+	},
+	// Q
+	{
+		term: "Qualia",
+		definition: "Cualidades subjetivas de las experiencias conscientes.",
+		philosopher: "Thomas Nagel",
+		example: "¿Cómo es ser un murciélago? Se refiere a los qualia de la experiencia."
+	},
+	// R
+	{
+		term: "Racionalismo",
+		definition: "Doctrina que sostiene que la razón es la principal fuente del conocimiento.",
+		philosopher: "René Descartes",
+		example: "Pienso, luego existo."
+	},
+	{
+		term: "Realismo",
+		definition: "Doctrina que afirma la existencia de una realidad independiente de la mente.",
+		philosopher: "Tomás de Aquino",
+		example: "El mundo existe aunque no lo percibamos."
+	},
+	// S
+	{
+		term: "Sofisma",
+		definition: "Razonamiento falso o engañoso con apariencia de verdad.",
+		philosopher: "Sofistas",
+		example: "El sofisma se usa para persuadir sin buscar la verdad."
+	},
+	{
+		term: "Sustancia",
+		definition: "Aquello que existe por sí mismo y en lo que residen los accidentes.",
+		philosopher: "Aristóteles",
+		example: "La sustancia es el sujeto último de la realidad."
+	},
+	// T
+	{
+		term: "Teleología",
+		definition: "Doctrina que explica los fenómenos por sus fines o propósitos.",
+		philosopher: "Aristóteles",
+		example: "La naturaleza no hace nada en vano, todo tiene un fin."
+	},
+	{
+		term: "Trascendencia",
+		definition: "Cualidad de lo que está más allá de los límites de la experiencia o la realidad mundana.",
+		philosopher: "Emmanuel Levinas",
+		example: "La trascendencia del Otro en la ética."
+	},
+	// U
+	{
+		term: "Utilitarismo",
+		definition: "Doctrina ética que sostiene que la mejor acción es la que produce mayor felicidad para el mayor número.",
+		philosopher: "John Stuart Mill",
+		example: "El fin justifica los medios si produce felicidad general."
+	},
+	{
+		term: "Utopía",
+		definition: "Representación imaginaria de una sociedad ideal y perfecta.",
+		philosopher: "Tomás Moro",
+		example: "La obra 'Utopía' describe una sociedad perfecta e inalcanzable."
+	},
+	// V
+	{
+		term: "Virtud",
+		definition: "Disposición habitual para obrar el bien.",
+		philosopher: "Aristóteles",
+		example: "La virtud es el justo medio entre dos extremos."
+	},
+	{
+		term: "Voluntad de poder",
+		definition: "Concepto central en la filosofía de Nietzsche, que describe la fuerza fundamental que impulsa al ser humano.",
+		philosopher: "Friedrich Nietzsche",
+		example: "La vida es voluntad de poder, no de conservación."
+	},
+	// Z
+	{
+		term: "Zoon politikón",
+		definition: "Expresión griega que significa 'animal político', es decir, el ser humano como ser social por naturaleza.",
+		philosopher: "Aristóteles",
+		example: "El hombre es un zoon politikón, destinado a vivir en sociedad."
+	}
 ];
 ---
 
